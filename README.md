@@ -65,7 +65,7 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
 
 2. **Run the Application**:
    ```bash
-   streamlit run app.py
+   streamlit run rag_medical_chatbot.py.py
    ```
 
 3. **Interact with the Chatbot**:
