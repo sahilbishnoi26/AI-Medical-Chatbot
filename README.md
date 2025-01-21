@@ -65,6 +65,17 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
    - Use the sidebar to create a vector database from the uploaded PDFs.
    - Ask questions in the chat input box, and the chatbot will respond based on the processed PDFs.
 
+### Example Responses
+1. **Context Available**: The bot answers based on the uploaded PDFs.
+   - Question: *"How to treat acne?"*
+   - Response: The chatbot provides the relevant treatment information because this knowledge was available in the PDF context.
+   - ![Context Example](https://github.com/sahilbishnoi26/ai-medical-chatbot/blob/main/data/qna_context.png)
+
+2. **Context Not Available**: The bot doesn't fabricate answers if the information is not in the PDFs.
+   - Question: *"Who is the best football player in the world?"*
+   - Response: *"I don't know."* The chatbot appropriately responds with "I don't know" as this information is outside the PDF context.
+   - ![No Context Example](https://github.com/sahilbishnoi26/ai-medical-chatbot/blob/main/data/qna_no_context.png)
+
 ## Troubleshooting
 
 - **Issue**: "Failed to load the vector store."
@@ -77,5 +88,4 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
   - **Solution**: Ensure all dependencies are installed by running `pip install -r requirements.txt`.
 
 - **Issue**: "Missing Hugging Face API token."
-  - **Solution**: Ensure your `.env` file is created and correctly configured with the `HUGGINGFACEHUB_API_TOKEN`.
-
+  - **Solution**: Ensure your `.env` file is created and correctly configured with the `HUGGINGFACEHUB
