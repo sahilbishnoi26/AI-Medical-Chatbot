@@ -4,15 +4,18 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
 
 ## Features
 - Upload and process medical PDFs to create a vectorized knowledge database.
-- AI chatbot powered by a Hugging Face language model for natural language understanding.
-- Context-aware question answering based on the content of uploaded PDFs.
+- AI chatbot powered by the **Mistral-7B-Instruct-v0.3** language model from Hugging Face.
+- Uses **sentence-transformers/all-MiniLM-L6-v2** for embedding the text into vectorized format.
+- Context-aware question answering strictly based on the uploaded content.
 - Easy-to-use web interface with real-time chat functionality.
 - Expandable section for viewing source documents used in the chatbot's answers.
 
 ## Technologies Used
 - **Streamlit**: For the user interface and app deployment.
-- **LangChain**: To create chains for document processing and retrieval.
-- **Hugging Face**: For the language model and embeddings.
+- **LangChain**: For chaining document processing and retrieval with the language model.
+- **Hugging Face**:
+  - **Mistral-7B-Instruct-v0.3**: A lightweight, instruction-tuned language model optimized for generating concise and accurate answers.
+  - **sentence-transformers/all-MiniLM-L6-v2**: A compact embedding model for encoding text into high-dimensional vectors.
 - **FAISS**: For efficient vector search and document retrieval.
 - **PyPDFLoader**: For extracting text from PDF files.
 - **Python**: As the primary programming language.
@@ -65,16 +68,15 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
    - Use the sidebar to create a vector database from the uploaded PDFs.
    - Ask questions in the chat input box, and the chatbot will respond based on the processed PDFs.
 
-### Example Responses
-1. **Context Available**: The bot answers based on the uploaded PDFs.
-   - Question: *"How to treat acne?"*
-   - Response: The chatbot provides the relevant treatment information because this knowledge was available in the PDF context.
-   - ![Context Example](https://github.com/sahilbishnoi26/ai-medical-chatbot/blob/main/data/qna_context.png)
+## Models Used
 
-2. **Context Not Available**: The bot doesn't fabricate answers if the information is not in the PDFs.
-   - Question: *"Who is the best football player in the world?"*
-   - Response: *"I don't know."* The chatbot appropriately responds with "I don't know" as this information is outside the PDF context.
-   - ![No Context Example](https://github.com/sahilbishnoi26/ai-medical-chatbot/blob/main/data/qna_no_context.png)
+1. **Hugging Face Mistral-7B-Instruct-v0.3**:
+   - A 7-billion-parameter instruction-tuned language model optimized for generating concise, accurate responses.
+   - Fine-tuned for instruction-based tasks, ensuring reliable and context-aware answers.
+
+2. **sentence-transformers/all-MiniLM-L6-v2**:
+   - A lightweight embedding model with only 6 layers and millions of parameters, providing high-quality vector representations for text.
+   - Ideal for semantic search and question-answering tasks.
 
 ## Troubleshooting
 
@@ -88,4 +90,4 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
   - **Solution**: Ensure all dependencies are installed by running `pip install -r requirements.txt`.
 
 - **Issue**: "Missing Hugging Face API token."
-  - **Solution**: Ensure your `.env` file is created and correctly configured with the `HUGGINGFACEHUB
+  - **Solution**: Ensure your `.env` file is created and correctly configured with the `HUGGINGFACEHUB_API_TOKEN`.
