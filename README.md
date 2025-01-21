@@ -1,6 +1,6 @@
 # Medical Chatbot with PDF Knowledge
 
-A Streamlit-based AI-powered chatbot that answers medical-related questions by using  knowledge from uploaded medical encyclopedia PDFs.
+A Streamlit-based AI-powered chatbot that answers medical-related questions by leveraging knowledge from uploaded medical encyclopedia PDFs. The chatbot processes and indexes the PDF data, enabling accurate and efficient responses.
 
 ## Features
 - Upload and process medical PDFs to create a vectorized knowledge database.
@@ -42,6 +42,14 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by u
    pip install -r requirements.txt
    ```
 
+4. **Set Up Environment Variables**:
+   - Create a `.env` file in the project root directory.
+   - Add the following lines to the `.env` file:
+     ```
+     HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token
+     ```
+   - Replace `your_huggingface_api_token` with your actual Hugging Face API token. You can obtain the token by signing up on [Hugging Face](https://huggingface.co) and navigating to your account settings.
+
 ## Usage
 
 1. **Prepare Medical PDF Files**:
@@ -67,3 +75,7 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by u
 
 - **Issue**: "Module not found" error during execution.
   - **Solution**: Ensure all dependencies are installed by running `pip install -r requirements.txt`.
+
+- **Issue**: "Missing Hugging Face API token."
+  - **Solution**: Ensure your `.env` file is created and correctly configured with the `HUGGINGFACEHUB_API_TOKEN`.
+
