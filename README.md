@@ -29,7 +29,7 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/medical-chatbot-with-pdf-knowledge.git
+   git clone https://github.com/your-username/AI-Medical-Chatbot.git
    cd medical-chatbot-with-pdf-knowledge
    ```
 
