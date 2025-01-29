@@ -1,6 +1,6 @@
 # Medical Chatbot with PDF Knowledge
 
-A Streamlit-based AI-powered chatbot that answers medical-related questions by leveraging knowledge from uploaded medical encyclopedia PDFs. The chatbot processes and indexes the PDF data, enabling accurate and efficient responses.
+A Streamlit-based AI-powered RAG chatbot that answers medical-related questions by leveraging knowledge from uploaded medical encyclopedia PDFs. The chatbot processes and indexes the PDF data, enabling accurate and efficient responses.
 
 ## Features
 - Upload and process medical PDFs to create a vectorized knowledge database.
