@@ -4,7 +4,7 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
 
 ## Features
 - Upload and process medical PDFs to create a vectorized knowledge database.
-- AI chatbot powered by **Mistral-7B-Instruct-v0.3**, a Hugging Face language model.
+- AI chatbot powered by **Mistral-7B-Instruct-v0.3** llm, via Hugging Face API.
 - Context-aware question answering based strictly on the content of uploaded PDFs.
 - Easy-to-use web interface with real-time chat functionality.
 - Expandable section for viewing source documents used in the chatbot's answers.
@@ -12,17 +12,12 @@ A Streamlit-based AI-powered chatbot that answers medical-related questions by l
 ## Technologies Used
 - **Streamlit**: For the user interface and app deployment.
 - **LangChain**: To create chains for document processing and retrieval.
-- **Hugging Face**: For the Mistral-7B-Instruct-v0.3 model and embeddings.
+- **Hugging Face**: For the Mistral-7B-Instruct-v0.3 LLM and embeddings.
 - **FAISS**: For efficient vector search and document retrieval.
 - **PyPDFLoader**: For extracting text from PDF files.
-- **Python**: As the primary programming language.
 
 ### Key AI Model Details
-- **Model Name**: `Mistral-7B-Instruct-v0.3`
-- **Provider**: Hugging Face
-- **Capabilities**:
-  - Supports instruction-tuned tasks for enhanced question-answering.
-  - Provides concise and context-aware responses.
+- **LLM**: `Mistral-7B-Instruct-v0.3`
 - **Embedding Model**: `sentence-transformers/all-MiniLM-L6-v2` for generating dense vector representations of text.
 
 ## Installation
